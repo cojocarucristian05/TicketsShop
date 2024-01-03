@@ -12,6 +12,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './component/verify-email/verify-email.component';
+import { HomeComponent } from './component/home/home.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { VerifyEmailComponent } from './component/verify-email/verify-email.comp
     RegisterComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

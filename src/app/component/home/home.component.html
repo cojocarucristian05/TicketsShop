@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 text-center">
+                    <h5 class="text-center text-warning">Add event</h5>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" name="title" [(ngModel)]="title">
+                    <label for="floatingInput">Title</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="numberOfSeats" name="numberOfSeats" [(ngModel)]="number_of_seats">
+                    <label for="floatingPassword">Number of seats</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="price" name="price" [(ngModel)]="price">
+                    <label for="floatingInput">Price</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="date" name="date" [(ngModel)]="date">
+                    <label for="floatingPassword">Date</label>
+                </div>
+                <button type="button" class="btn btn-outline-success" (click)="addEvent()">Add Event</button>
+            </div>
+        </div>
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger"> Event List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Number of Seats</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let event of eventsList">
+                                <td>{{event.title}}</td>
+                                <td>{{event.price}}</td>
+                                <td>{{event.number_of_seats}}</td>
+                                <td>{{event.date}}</td>
+                                <td>
+                                    <button class="btn btn-outline-danger" (click)="deleteEvent(event)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
