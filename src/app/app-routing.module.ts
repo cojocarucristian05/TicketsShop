@@ -6,6 +6,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './component/verify-email/verify-email.component';
 import { HomeComponent } from './component/home/home.component';
+import { MyEventsComponent } from './component/my-events/my-events.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path : "home",
     component : HomeComponent
+  },
+  {
+    path : "my-events",
+    component : MyEventsComponent
+  },
+  {
+    path : "profile",
+    component : ProfileComponent
   }
 ];
 

@@ -14,6 +14,8 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 import { VerifyEmailComponent } from './component/verify-email/verify-email.component';
 import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { MyEventsComponent } from './component/my-events/my-events.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     ForgotPasswordComponent,
     VerifyEmailComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    MyEventsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

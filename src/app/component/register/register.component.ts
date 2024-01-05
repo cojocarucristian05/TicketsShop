@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
+import { AuthorizationService } from 'src/app/shared/authorization.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthorizationService) {}
 
   ngOnInit(): void {}
 
@@ -25,7 +26,7 @@ export class RegisterComponent {
       return;
     }
 
-    this.authService.register(this.email, this.password);
+    this.authService.signUp(this.email, this.password);
     this.email = '';
     this.password = '';
   }

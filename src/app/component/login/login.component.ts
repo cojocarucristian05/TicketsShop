@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
+import { AuthorizationService } from 'src/app/shared/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthorizationService) {}
 
   ngOnInit(): void {}
 
@@ -25,7 +26,7 @@ export class LoginComponent {
       return;
     }
 
-    this.authService.login(this.email, this.password);
+    this.authService.signIn(this.email, this.password);
     this.email = '';
     this.password = '';
   }

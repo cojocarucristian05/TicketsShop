@@ -10,7 +10,6 @@ export class DataService {
   constructor(private angularFirestore: AngularFirestore) { }
 
   addEvent(event: Event) {
-    event.id = this.angularFirestore.createId();
     return this.angularFirestore.collection('/Events').add(event);
   }
 
